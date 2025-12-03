@@ -15,7 +15,12 @@ const TodoList = ({todos,onDel,onToggle}) => {
                         textDecorationColor : list.done ? "rgba(46, 121, 71, 0.4)" : "none",
                         textDecorationThickness : list.done ? "10px" : "none" 
                         }}>{list.todo}</span>
-                    <button onClick={()=>{onDel(list.id)}}>×</button>
+                    <button 
+                    id={`todo-delete-btn-${list.id}`}
+                    className="todo-delete-btn"
+                    onClick={()=>{onDel(list.id)}}>
+                        ×
+                    </button>
                 </li>
                 )
             })

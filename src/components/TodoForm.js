@@ -4,6 +4,7 @@ const TodoForm = ({onSave}) => {
     const [task,setTask] = useState('');
     const handleSubmit = (e)=>{
         e.preventDefault(); //기존 기능 방지
+        if (task.trim() === '') return;
         onSave(task);
         setTask('');
     }
@@ -14,12 +15,13 @@ const TodoForm = ({onSave}) => {
     // }
   return (
     <div id="todo-form">
-        <h2>할일 내용을 입력해 주세요.</h2>
+        {/* <h2>할일 내용을 입력해 주세요.</h2> */}
         <form onSubmit={handleSubmit}>
             <input 
                 type="text"
                 value={task}
                 onChange={(e)=>{setTask(e.target.value)}}
+                placeholder="할일을 입력하세요."
                 // onKeyDown={handlekeyDown}
             />
         </form>

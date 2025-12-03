@@ -1,0 +1,13 @@
+.time{
+    position: fixed;
+    top: 20%;
+    text-align: center;
+    font-size: 130px;
+    font-weight: 600;
+    color: #E8EAED;
+    text-shadow:
+    0 0 20px rgba(0, 0, 0, 0.8), 
+    0 0 40px rgba(0, 0, 0, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.9);
+
+}

@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
 }
+li{ list-style: none;}
+
 body{
     position: relative;
     font-family: 'Pretendard';
@@ -23,35 +25,157 @@ body::before{
     z-index: 1;
     pointer-events: none;
 }
+
 #login-page{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    text-align: center;
     font-weight: 500;
-    gap: 8px;
+    text-align: center;
+    gap: 20px;
     h2{
         color: #fff;
-        text-shadow: 5px 5px 10px #000;
-        gap: 10px;
+        font-size: 45px;
+        font-weight: 500;
+        text-shadow:
+        0 2px 8px rgba(0,0,0,0.8),
+        0 0 20px rgba(0, 0, 0, 0.6);
+        margin: 0;
     }
+    .input-button{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+        max-width: 400px;
+        input{
+            flex: 1;
+            padding: 10px 12px;
+            font-size: 1rem;
+            border-radius: 24px;
+            border: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.5);
+            background-color: #ddd;
+            opacity: 0.9;
+        }
+        button{
+            background-color: rgba(221, 221, 221, 0.6);
+            color: #333;
+            padding: 10px 12px;
+            border-radius: 24px;
+            border: none;
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            &:hover{
+                background-color: #888;
+            }
+        }
+    }
+}
+
+#hello-page{
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 45px;
+    text-shadow: 5px 5px 10px #000;
+}
+.logout-text{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    small{
+        font-family: 'OmuDaye';
+        margin: 1rem;
+        font-size: 20px;
+        color: #222;
+        text-align: center;
+        text-shadow: 0 1px 4px rgba(10,10,20,0.5);
+    }
+    #logout-btn{
+        padding: 10px 12px;
+        border-radius: 24px;
+        border: none;
+        background-color: #ddd;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+         &:hover{
+                background-color: #888;
+            }
+    }
+}
+
+#todo-form{
+    margin: 2rem;
+    text-align: center;
+    /* h2{
+        margin: 8px;
+        color: #fff;
+        font-size: 35px;
+        font-weight: 400;
+        text-shadow: 0 1px 4px rgba(10,10,20,0.8);
+    } */
     input{
-        flex: 1;
-        padding: 8px;
-        font-size: 1rem;
-        border-radius: 1rem;
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background-color: rgba(221, 221, 221, 0.6);
+        border: none;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.5);
+        font-weight: 600;
     }
-    button{
-        padding: 8px 16px;
-        border-radius: 1rem;
-        font-size: 1rem;
+}
+
+#todo-list{
+    padding: 25px;
+    margin: 20px;
+    width: 95%;
+    background-color: rgba(221, 221, 221, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.5);
+    li{
+        margin: 5px;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+    .todo-delete-btn{
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+        border-radius: 6px;
+        background-color: #fff;
+        border: none;
         cursor: pointer;
     }
 }
 
-
-
+#qute-page{
+    position: fixed;
+    left: 20px;
+    bottom: 40px;
+    background-color: rgba(221, 221, 221, 0.6);
+    padding: 16px 30px;
+    border-radius: 24px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.5);
+    color: #333;
+    font-size: 20px;
+    max-width: 320px;
+    z-index: 1000;
+    p{
+        margin: 0 0 8px 0;
+        line-height: 1.4;
+    }
+    small{
+        display: block;
+        text-align: right;
+        font-size: 0.85rem;
+        opacity: 0.8;
+    }
+}
 
 #weather-page{
     position: absolute;
@@ -59,15 +183,14 @@ body::before{
     bottom: 40px;
     padding: 16px 22px;
     width: fit-content;
-    background: rgba(255, 255, 255, 0.32);
+    background-color: #ddd;
+    opacity: 0.8;
     border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(14px);
-    color: #555;
+    color: #444;
     font-weight: 500;
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
-    img{
-        width: 60px;
-        height: 60px;
-    }
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.5);
+}
+#weather-page img{
+    width: 60px;
+    height: 60px;
 }

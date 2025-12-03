@@ -1,10 +1,12 @@
 import "./styles/App.css";
+import "./styles/Time.css";
 import Hello from "./components/Hello"
 import Login from "./components/Login"
 import Quotes from "./components/Quotes"
 import Todos from "./components/Todos"
 import Weather from "./components/Weather"
 import {useState, useEffect} from "react"
+import Time from "./components/Time";
 const App = () => {
   const [userName, setUserName] = useState(null);
   const handleLogin = (data)=>{
@@ -25,6 +27,7 @@ const App = () => {
   },[]);
   return (
     <div id="app">
+      <Time />
       {userName ? <Hello user={userName} onLogout={handleLogout}/> : <Login onLogin={handleLogin}/>}
       <Quotes />
       <Todos />
