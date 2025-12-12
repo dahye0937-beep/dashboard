@@ -12,8 +12,8 @@ const TodoList = ({todos,onDel,onToggle}) => {
                     />
                     <span style={{
                         textDecoration : list.done ? "line-through":"none",
-                        textDecorationColor : list.done ? "rgba(46, 121, 71, 0.4)" : "none",
-                        textDecorationThickness : list.done ? "10px" : "none" 
+                        textDecorationColor : list.done ? "#903f29ff" : "none",
+                        textDecorationThickness : list.done ? "5px" : "none" 
                         }}>{list.todo}</span>
                     <button 
                     id={`todo-delete-btn-${list.id}`}

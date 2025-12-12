@@ -61,16 +61,15 @@ const Weather = () => {
 
         {!weather && <p>위치 정보를 기다리는 중...</p>}
         {
-            weather && (
+          weather && (
         <>
-        <h2>현재 위치 기준 날씨</h2>
-        <p>도시 : {weather.name}</p>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '5px'}}>
+          {iconUrl && <img src={iconUrl} alt={weather.weather[0].description}/>}
+          <strong>도시: </strong><span>{weather.name}</span>
+        </div>
         <p>기온 : {weather.main.temp}℃</p>
         <p>체감 온도 : {weather.main.feels_like}℃</p>
         <p>날씨 설명 : {weather.weather[0].description}</p>
-        {
-            iconUrl && <img src={iconUrl} alt={weather.weather[0].description}/>
-        }
         </>   
         )
         }

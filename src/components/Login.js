@@ -8,7 +8,7 @@ const Login = ({onLogin}) => {
     }
   return (
     <form id="login-page" onSubmit={handleSubmit}>
-        <h2>이름을 입력해 주세요, 반갑습니다.</h2>
+        <h2>오늘은 어떤 이름으로 기록 할까요?</h2>
         <div className="input-button">
         <input
             type="text"
